@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.809.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{9E47FD12-2FDA-4D10-B9EA-304205CEE423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheetSample.Android", "..\..\Sample\ContentSheetSample.Android\ContentSheetSample.Android.csproj", "{812B0E72-7A2E-4FAB-BD35-EFAED6011C89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheetSample.Android", "Sample\ContentSheetSample.Android\ContentSheetSample.Android.csproj", "{812B0E72-7A2E-4FAB-BD35-EFAED6011C89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheetSample.iOS", "..\..\Sample\ContentSheetSample.iOS\ContentSheetSample.iOS.csproj", "{B83DB5B9-3719-404C-A0B2-C94D514861F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheetSample.iOS", "Sample\ContentSheetSample.iOS\ContentSheetSample.iOS.csproj", "{B83DB5B9-3719-404C-A0B2-C94D514861F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheetSample", "..\..\Sample\ContentSheetSample\ContentSheetSample.csproj", "{61689073-171A-4BC6-8183-7875D5AA8D95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheetSample", "Sample\ContentSheetSample\ContentSheetSample.csproj", "{61689073-171A-4BC6-8183-7875D5AA8D95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{9B2BE901-6DA5-491B-8AD8-6E4D37272237}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheet", "ContentSheet.csproj", "{53E4D0D2-4ABD-4309-A42F-1760512A363D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentSheet", "Src\ContentSheet\ContentSheet.csproj", "{53E4D0D2-4ABD-4309-A42F-1760512A363D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
