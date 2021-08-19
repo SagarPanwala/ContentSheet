@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<cs:ContentSheetView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cs="clr-namespace:ContentSheet.Control;assembly=ContentSheet"
+    x:Class="ContentSheetSample.CountrySelectionSheet"
+    Direction="Center"
+    LightboxBackgroundColor="#80FF0000">
+    <StackLayout>
+        <Label
+            Text="{Binding Title}"
+            FontSize="Small"
+            FontAttributes="Bold"
+            HorizontalTextAlignment="Center" />
+        <Entry
+            Placeholder="Age"
+            Keyboard="Numeric"
+            Text="{Binding Age}" />
+
+        <Picker
+            x:Name="picker"
+            Title="Select a monkey"
+            TitleColor="Red"
+            SelectedItem="{Binding SelectedMonkey}">
+            <Picker.ItemsSource>
+                <x:Array
+                    Type="{x:Type x:String}">
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            Text="Update Light"
+            Command="{Binding UpdateColorCommand}" />
+
+        <Button
+            Text="Read"
+            Command="{Binding ReadCommand}" />
+
+        <Button
+            Text="Done"
+            Command="{Binding DoneCommand}" />
+    </StackLayout>
+</cs:ContentSheetView>

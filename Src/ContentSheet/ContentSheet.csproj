@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageVersion>1.0</PackageVersion>
+		<Authors>Sagar Panwala</Authors>
+		<Description>Cross Platform ContentSheet</Description>
+		<PackageId>ContentSheet</PackageId>
+		<Copyright>Sagar Panwala</Copyright>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Owners>Sagar Panwala</Owners>
+		<PackageProjectUrl>https://github.com/SagarPanwala/ContentSheet</PackageProjectUrl>
+		<PackageReleaseNotes>Cross Platform Content Sheet for Xamarin Forms, MAUI using Rg Popup</PackageReleaseNotes>
+		<Summary>Make Cross Platform ContentSheet easily available</Summary>
+		<PackageTags>ContentSheet BottomSheet XamarinForms MAUI RgPopup</PackageTags>
+		<Title>Content Sheet</Title>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+		<PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.12" />
+	</ItemGroup>
+</Project>
