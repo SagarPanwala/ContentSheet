@@ -40,13 +40,14 @@ namespace ContentSheet.Control
             set => SetValue(CloseWhenBackgroundIsClickedpProperty, value);
         }
 
+        private const int closeAfterDraggedPortion = 4;
+
         private bool CanPanHorizontally = false;
         private bool CanPanVertically = false;
-        private PanGestureRecognizer PanGesture;
-
-
         private double translateX;
         private double translateY;
+
+        private PanGestureRecognizer PanGesture;
 
         public ContentSheetView()
         {
@@ -117,7 +118,20 @@ namespace ContentSheet.Control
             }
         }
 
-        private async void OnPanUpdated(object sender, PanUpdatedEventArgs e)
+        private void OnPanUpdated(object sender, PanUpdatedEventArgs e)
+        {
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                double TotalX_Modified = e.TotalX + (sender as View).TranslationX;
+                double TotalY_Modified = e.TotalY + (sender as View).TranslationY;
+
+                e = new PanUpdatedEventArgs(e.StatusType, e.GestureId, TotalX_Modified, TotalY_Modified);
+            }
+
+            OnModifiedPanUpdated(sender, e);
+        }
+
+        private async void OnModifiedPanUpdated(object sender, PanUpdatedEventArgs e)
         {
             switch (e.StatusType)
             {
@@ -187,11 +201,11 @@ namespace ContentSheet.Control
         {
             if (CanPanHorizontally)
             {
-                return Math.Abs(translateX) > this.Width / 4;
+                return Math.Abs(translateX) > this.Width / closeAfterDraggedPortion;
             }
             else if (CanPanVertically)
             {
-                return Math.Abs(translateY) > this.Height / 4;
+                return Math.Abs(translateY) > this.Height / closeAfterDraggedPortion;
             }
             return false;
         }
